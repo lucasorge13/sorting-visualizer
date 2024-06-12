@@ -1,0 +1,17 @@
+.array-container {
+  position: absolute;
+  left: 100px;
+  bottom: 100px; /* Adjust to position the bars properly within the container */
+  width: calc(100% - 200px); /* Adjust the width to fit within the container */
+  height: calc(100vh - 200px); /* Adjust the height to fit within the container */
+  display: flex;
+  align-items: flex-end; /* Align bars to the bottom */
+  justify-content: center; /* Center the bars horizontally */
+}
+
+.array-bar {
+  width: 2px;
+  margin: 0 1px;
+  background-color: #61dafb; /* Change color to a pleasant blue */
+  transition: all 0.2s ease; /* Smooth transition for animations */
+}
