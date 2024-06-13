@@ -60,7 +60,31 @@ export default class SortingVisualizer extends React.Component {
   }
 
   quickSort() {
-    // We leave it as an exercise to the viewer of this code to implement this method.
+    const animations = getQuickSortAnimations(this.state.array);
+    for (let i = 0; i < animations.length; i++) {
+      const arrayBars = document.getElementsByClassName('array-bar');
+      const [barOneIdx, barTwoIdx, action] = animations[i];
+      const barOneStyle = arrayBars[barOneIdx]?.style;
+      const barTwoStyle = arrayBars[barTwoIdx]?.style;
+      if (!barOneStyle || !barTwoStyle) continue;
+      if (action === 'compare') {
+        setTimeout(() => {
+          barOneStyle.backgroundColor = SECONDARY_COLOR;
+          barTwoStyle.backgroundColor = SECONDARY_COLOR;
+        }, i * ANIMATION_SPEED_MS);
+      } else if (action === 'swap') {
+        setTimeout(() => {
+          const tempHeight = barOneStyle.height;
+          barOneStyle.height = barTwoStyle.height;
+          barTwoStyle.height = tempHeight;
+        }, i * ANIMATION_SPEED_MS);
+      } else if (action === 'revert') {
+        setTimeout(() => {
+          barOneStyle.backgroundColor = PRIMARY_COLOR;
+          barTwoStyle.backgroundColor = PRIMARY_COLOR;
+        }, i * ANIMATION_SPEED_MS);
+      }
+    }
   }
 
   heapSort() {
