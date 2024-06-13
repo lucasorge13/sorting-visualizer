@@ -5,7 +5,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <SortingVisualizer></SortingVisualizer>
+      <div className="title">Sorting Visualizer</div>
+      <SortingVisualizer />
     </div>
   );
 }
