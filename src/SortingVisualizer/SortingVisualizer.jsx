@@ -1,13 +1,17 @@
-import React from 'react';
-import {getMergeSortAnimations} from '../sortingAlgorithms/sortingAlgorithms.js';
+import React,{ useEffect, useState } from 'react';
+import {getMergeSortAnimations, getQuickSortAnimations,getBubbleSortAnimations, getInsertionSortAnimations } from '../sortingAlgorithms/sortingAlgorithms.js';
 import './SortingVisualizer.css';
 
+// Change this value for the speed of the animations.
 const ANIMATION_SPEED_MS = 1;
 
+// Change this value for the number of bars (value) in the array.
 const NUMBER_OF_ARRAY_BARS = 310;
 
+// This is the main color of the array bars.
 const PRIMARY_COLOR = 'turquoise';
 
+// This is the color of array bars that are being compared throughout the animations.
 const SECONDARY_COLOR = 'red';
 
 export default class SortingVisualizer extends React.Component {
@@ -56,18 +60,20 @@ export default class SortingVisualizer extends React.Component {
   }
 
   quickSort() {
-
+    // We leave it as an exercise to the viewer of this code to implement this method.
   }
 
   heapSort() {
-
+    // We leave it as an exercise to the viewer of this code to implement this method.
   }
 
   bubbleSort() {
-
+    // We leave it as an exercise to the viewer of this code to implement this method.
   }
 
-
+  // NOTE: This method will only work if your sorting algorithms actually return
+  // the sorted arrays; if they return the animations (as they currently do), then
+  // this method will be broken.
   testSortingAlgorithms() {
     for (let i = 0; i < 100; i++) {
       const array = [];
@@ -108,8 +114,8 @@ export default class SortingVisualizer extends React.Component {
   }
 }
 
+
 function randomIntFromInterval(min, max) {
-  // min and max included
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
