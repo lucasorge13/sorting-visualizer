@@ -58,15 +58,15 @@ body, html {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  width: 80%;
-  height: 60%;
+  width: 90%;
+  height: 70%;
   margin: 0 auto;
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #fff; /* White background for bars */
-  position: relative;
+  position: absolute;
 }
 
 .array-bar {
