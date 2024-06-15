@@ -1,5 +1,5 @@
 import React,{ useEffect, useState } from 'react';
-import {getMergeSortAnimations, getBubbleSortAnimations} from '../sortingAlgorithms/sortingAlgorithms.js';
+import {getMergeSortAnimations} from '../sortingAlgorithms/sortingAlgorithms.js';
 import {getQuickSortAnimations} from '../sortingAlgorithms/quickSort.js';
 import {getHeapSortAnimations} from '../sortingAlgorithms/heapSort.js';
 import {getBubbleSortAnimations} from '../sortingAlgorithms/quickSort.js';
