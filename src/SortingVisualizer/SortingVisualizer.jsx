@@ -2,7 +2,7 @@ import React,{ useEffect, useState } from 'react';
 import {getMergeSortAnimations} from '../sortingAlgorithms/mergeSort.js';
 import {getQuickSortAnimations} from '../sortingAlgorithms/quickSort.js';
 import {getHeapSortAnimations} from '../sortingAlgorithms/heapSort.js';
-import {getBubbleSortAnimations} from '../sortingAlgorithms/quickSort.js';
+import {getBubbleSortAnimations} from '../sortingAlgorithms/bubbleSort.js';
 import './SortingVisualizer.css';
 
 // Change this value for the speed of the animations.
